@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1008077390733",
+    "firebase_url": "https://lezzet-d5942-default-rtdb.firebaseio.com",
+    "project_id": "lezzet-d5942",
+    "storage_bucket": "lezzet-d5942.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008077390733:android:348c83eac265f425ef73c4",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNI3OJKJRnsBgahxBdqxmKqtBh0StHH9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

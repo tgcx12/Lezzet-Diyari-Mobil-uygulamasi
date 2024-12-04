@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/recipeFragment">
+
+    <!-- Giriş Yapma Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" >
+        <!-- Diğer fragment'lere geçişleri tanımlayın -->
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.myapplication.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password" />
+
+
+    <!-- Tarifler Fragment -->
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.myapplication.RecipeFragment"
+        tools:layout="@layout/fragment_recipe">
+        <action
+            android:id="@+id/action_recipeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_recipeFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_recipeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+
+    <!-- Favoriler Fragment -->
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.myapplication.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+
+    <!-- Kayıt Olma Fragment -->
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.myapplication.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Tarif Ekleme Fragment -->
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.example.myapplication.AddRecipeFragment"
+        tools:layout="@layout/fragment_add_recipe">
+        <action
+            android:id="@+id/action_addRecipeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Recipe Detail Fragment -->
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.myapplication.RecipeDetailFragment"
+        android:label="Tarif Detayı">
+        <argument
+            android:name="recipeId"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Kategoriler Fragment -->
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.myapplication.CategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+
+        <action
+            android:id="@+id/action_categoriesFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+
+</navigation>

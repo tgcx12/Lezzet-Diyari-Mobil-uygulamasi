@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_recipes"
+        android:icon="@drawable/ic_recipes"
+        android:title="Tarifler" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="Favoriler" />
+    <item
+        android:id="@+id/nav_add_recipe"
+        android:icon="@drawable/ic_add"
+        android:title="Tarif Ekle" />
+
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/ic_login"
+        android:title="Giriş Yap" />
+</menu>

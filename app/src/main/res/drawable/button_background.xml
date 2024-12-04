@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/anaRenk"/> <!-- Buton arka plan rengi -->
+    <corners android:radius="8dp"/> <!-- Kenar yuvarlama -->
+    <padding
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp"/> <!-- İç boşluk -->
+</shape>

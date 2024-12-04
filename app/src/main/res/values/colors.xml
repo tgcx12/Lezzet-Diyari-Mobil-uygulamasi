@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColor">#FFFFFFFF</color>
+    <color name="buttonColor">#191E30</color>
+    <color name="endColor">#191E30</color>
+    <color name="startColor">#FF9800</color>
+    <color name="CenterColor">#73562C</color>
+    <color name="arkaplan">#D50000</color>
+    <color name="logoarkaplan">#f2f5f6</color>
+    <color name="logoyazı">#442a00</color>
+    <color name="black">#000000</color>
+    <color name="tabRippleColor">#FFDDDDDD</color>
+
+
+    <!-- Ana Renk -->
+        <color name="anaRenk">#d84012</color>
+
+        <!-- Arka Plan Rengi -->
+        <color name="arkaPlanRengi">#f2f5f6</color>
+
+        <!-- Vurgu Rengi -->
+        <color name="vurguRengi">#ec8f0e</color>
+
+        <!-- Metin Rengi -->
+        <color name="metinRengi">#aca494</color>
+
+    <color name="red">#FF0000</color>
+    <color name="gray">#808080</color>
+
+
+
+</resources>

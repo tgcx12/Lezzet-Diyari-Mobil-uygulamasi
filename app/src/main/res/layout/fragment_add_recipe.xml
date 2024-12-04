@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <!-- Data Binding for future use -->
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tarif Adı -->
+            <TextView
+                android:id="@+id/recipeNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarif Adı:"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:id="@+id/recipeNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tarif Adı"/>
+
+            <!-- Kategori -->
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kategori:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Kaç Kişilik -->
+            <TextView
+                android:id="@+id/servingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaç Kişilik:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/servingsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Hazırlama Süresi -->
+            <TextView
+                android:id="@+id/prepTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hazırlama Süresi:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/prepTimeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Pişirme Süresi -->
+            <TextView
+                android:id="@+id/cookTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pişirme Süresi:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/cookTimeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Malzemeler -->
+            <TextView
+                android:id="@+id/ingredientsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malzemeler:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/ingredientsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Malzemeleri yazın"/>
+
+            <!-- Hazırlama Talimatları -->
+            <TextView
+                android:id="@+id/instructionsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hazırlama Talimatları:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/instructionsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hazırlama talimatlarını yazın"/>
+
+            <!-- Resim Yükle -->
+            <Button
+                android:id="@+id/uploadImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resim Yükle"
+                style="@style/MyButtonStyle"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Resim Görüntüleme Alanı -->
+            <ImageView
+                android:id="@+id/recipeImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Tarifi Ekle Butonu -->
+            <Button
+                android:id="@+id/addRecipeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarif Ekle"
+                style="@style/MyButtonStyle"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Giriş Yapma Mesajı -->
+            <TextView
+                android:id="@+id/loginPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarif Eklemek için lütfen giriş yapınız"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:visibility="gone"/>
+
+            <!-- Giriş Yap Butonu -->
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giriş Yap"
+                android:visibility="gone"
+                style="@style/MyButtonStyle"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

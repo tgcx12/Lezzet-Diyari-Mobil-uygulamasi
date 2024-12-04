@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+
+    <!-- Sabit Sekmeler için TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:tabTextColor="@color/anaRenk"
+        app:tabSelectedTextColor="@color/anaRenk"
+        app:tabIndicatorColor="@color/anaRenk"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed">
+
+        <!-- Sekme Başlıkları -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_recipe" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_comments" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Tarif Detayları Layout -->
+    <ScrollView
+        android:id="@+id/layoutRecipeDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Tarif Başlığı -->
+            <TextView
+                android:id="@+id/recipeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="8dp"
+                android:textColor="@color/anaRenk" />
+
+            <!-- Tarif Görseli ve Favori İkonunu İçeren FrameLayout -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Tarif Görseli -->
+                <ImageView
+                    android:id="@+id/recipeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <!-- Favorilere Ekle İkonu (Kalp Şeklinde) -->
+                <ImageView
+                    android:id="@+id/heartIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_heart_outline"
+                    android:contentDescription="Favorilere Ekle" />
+            </FrameLayout>
+
+            <!-- Yazar Bilgileri ve Tarif Detayları -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <!-- Yazar Profil Resmi ve Kullanıcı Adı -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <!-- Yazar Profil Resmi -->
+                    <ImageView
+                        android:id="@+id/authorImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile_placeholder"
+                        android:clipToOutline="true"
+                        android:contentDescription="Yazar Profil Resmi" />
+
+                    <!-- Yazar İsmi -->
+                    <TextView
+                        android:id="@+id/authorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/author_name"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <!-- Tarif Detayları (Kaç Kişilik, Hazırlama Süresi, Pişirme Süresi) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- Kaç Kişilik Bilgisi -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/servings_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/anaRenk" />
+
+                        <TextView
+                            android:id="@+id/servings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2-4"
+                            android:textSize="12sp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <!-- Hazırlama Süresi Bilgisi -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prep_time_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/anaRenk" />
+
+                        <TextView
+                            android:id="@+id/prepTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 dk"
+                            android:textSize="12sp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <!-- Pişirme Süresi Bilgisi -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cook_time_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/anaRenk" />
+
+                        <TextView
+                            android:id="@+id/cookTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 dk"
+                            android:textSize="12sp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Malzemeler Başlığı -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/anaRenk" />
+
+            <!-- Malzemeler Listesi -->
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_list"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black" />
+
+            <!-- Talimatlar Başlığı -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/anaRenk" />
+
+            <!-- Talimatlar Listesi -->
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_list"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Yorumlar Layout -->
+    <LinearLayout
+        android:id="@+id/commentsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvNoComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İlk yorumu yapan siz olun"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- ListView for Comments -->
+        <ListView
+            android:id="@+id/commentsListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+    <!-- Yorum Yazma Alanı (Her Zaman Görünür) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/etComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Yorumunuzu buraya yazınız."
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/btnSendComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Gönder"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

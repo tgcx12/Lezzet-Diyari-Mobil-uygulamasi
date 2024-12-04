@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Lezzet Diyarı</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">Menüyü Aç</string>
+    <string name="close_drawer">Menüyü Kapat</string>
+
+    <!-- TabLayout İçin Metinler -->
+    <string name="tab_recipe">Tarif</string>
+    <string name="tab_comments">Yorumlar</string>
+    <string name="tab_tryers">Deneyenler</string>
+
+    <!-- Tarif İçeriği -->
+    <string name="recipe_title">Tarif Adı</string>
+    <string name="author_name">Yazar Adı</string>
+    <string name="servings_text">Kaç Kişilik</string>
+    <string name="prep_time_text">Hazırlama Süresi</string>
+    <string name="cook_time_text">Pişirme Süresi</string>
+    <string name="ingredients_title">Malzemeler</string>
+    <string name="ingredients_list">Malzemeler buraya gelecek.</string>
+    <string name="instructions_title">Hazırlama Talimatları</string>
+    <string name="instructions_list">Talimatlar buraya gelecek.</string>
+
+
+</resources>

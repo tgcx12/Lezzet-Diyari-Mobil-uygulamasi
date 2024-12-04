@@ -1,0 +1,46 @@
+<resources>
+    <!-- Ana uygulama teması -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/anaRenk</item>
+        <item name="colorPrimaryDark">@color/anaRenk</item>
+        <item name="colorAccent">@color/vurguRengi</item>
+        <item name="android:statusBarColor">@color/anaRenk</item>
+        <item name="android:background">@color/arkaPlanRengi</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Buton stili -->
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+        <!-- Toolbar stili (isteğe bağlı) -->
+        <style name="MyToolbarStyle" parent="Widget.AppCompat.Toolbar">
+            <item name="android:background">@color/anaRenk</item>
+            <item name="android:titleTextColor">@android:color/white</item>
+            <item name="android:textColor">@android:color/black</item> <!-- Renk değişikliği -->
+            <item name="android:textSize">20sp</item> <!-- Boyut değişikliği -->
+            <item name="android:textStyle">bold|italic</item> <!-- Stil değişikliği -->
+        </style>
+
+
+    <!-- Splash ekran teması -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- Popup Overlay teması -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/logoarkaplan</item>
+    </style>
+
+
+</resources>

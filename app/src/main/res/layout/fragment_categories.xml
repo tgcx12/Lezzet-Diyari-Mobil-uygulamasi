@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Başlık kısmı -->
+    <TextView
+        android:id="@+id/categoriesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategoriler"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/anaRenk"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- ExpandableListView kısmı -->
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+</LinearLayout>
